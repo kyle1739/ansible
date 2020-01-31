@@ -1,0 +1,34 @@
+- hosts: kube_master
+  gather_facts: true
+  become: yes
+  vars:
+    beats_version: 7.5.1
+    beat: metricbeat
+    beat_conf:
+      metricbeat:
+        modules:
+          - module: "system"
+            metricsets:
+              - cpu
+              - filesystem
+              - network
+            enable: true
+            period: 5m
+            cpu_ticks: false
+  roles: 
+    - beats
+
+- hosts: kube_worker
+  gather_facts: true
+  become: yes
+  vars:
+    beats_version: 7.5.1
+    beat: filebeat
+    beat_conf:
+      inputs:
+        - type: log
+          enable: true
+          paths:
+            - /var/log/*.log
+  roles:
+    - beats

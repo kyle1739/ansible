@@ -1,0 +1,6 @@
+[all:vars]
+# ansible_python_interpreter=/usr/bin/python3
+# ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q -p 8022 larvata@dev.larvata.tw"'
+ansible_connection=ssh
+ansible_port=8822
+ansible_user=solar

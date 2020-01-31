@@ -1,0 +1,88 @@
+# MariaDB https://github.com/bertvv/ansible-role-mariadb
+mariadb_bind_address: '0.0.0.0'
+mariadb_version: '10.3.21'
+mariadb_root_password: mac123456 
+
+mariadb_server_cnf:
+  slow-query-log:
+  slow-query-log-file: '/var/log/mysql/mariadb-slow.log'
+  log_error: '/var/log/mysql/mariadb.err'
+
+mariadb_databases:
+  - name: smtv
+  - name: BocatSports
+  - name: meow
+  - name: shanmao
+  - name: ldzb8
+  - name: ldsports
+  - name: hqzb
+  - name: pinqiu
+  - name: meiqiu
+  - name: ggzb
+  - name: ggzb2
+  - name: 18luck
+  - name: xbzb
+  - name: ldsp
+
+mariadb_users:
+  - name: smtv
+    password: smtv
+    priv: 'smtv.*:ALL,GRANT'
+    host: "%"
+  - name: BocatSports
+    password: BocatSports
+    priv: 'BocatSports.*:ALL,GRANT'
+    host: "%"
+  - name: meow
+    password: meow
+    priv: 'meow.*:ALL,GRANT'
+    host: "%"
+  - name: shanmao
+    password: shanmao
+    priv: 'shanmao.*:ALL,GRANT'
+    host: "%"
+  - name: ldzb8
+    password: ldzb8
+    priv: 'ldzb8.*:ALL,GRANT'
+    host: "%"
+  - name: ldsports
+    password: ldsports
+    priv: 'ldsports.*:ALL,GRANT'
+    host: "%"
+  - name: hqzb
+    password: hqzb
+    priv: 'hqzb.*:ALL,GRANT'
+    host: "%"
+  - name: pinqiu
+    password: pinqiu
+    priv: 'pinqiu.*:ALL,GRANT'
+    host: "%"
+  - name: meiqiu
+    password: meiqiu
+    priv: 'meiqiu.*:ALL,GRANT'
+    host: "%"
+  - name: ggzb
+    password: ggzb
+    priv: 'ggzb.*:ALL,GRANT'
+    host: "%"
+  - name: ggzb2
+    password: ggzb2
+    priv: 'ggzb2.*:ALL,GRANT'
+    host: "%"
+  - name: 18luck
+    password: 18luck
+    priv: '18luck.*:ALL,GRANT'
+    host: "%"
+  - name: xbzb
+    password: xbzb
+    priv: 'xbzb.*:ALL,GRANT'
+    host: "%"
+  - name: ldsp
+    password: ldsp
+    priv: 'ldsp.*:ALL,GRANT'
+    host: "%"
+  - name: RDUser
+    password: 1qaz@WSX
+    priv: '*.*:SELECT,GRANT'
+    host: "%"
+#Redis https://github.com/geerlingguy/ansible-role-redis

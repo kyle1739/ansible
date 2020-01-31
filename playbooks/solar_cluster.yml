@@ -1,0 +1,19 @@
+- hosts: kube_master
+  gather_facts: true
+  become: yes
+  vars:
+    kubernetes_role: "master"
+    api_port: 22280
+    kubernetes_apiserver_advertise_address: 192.168.20.173
+  roles: 
+    - docker
+    - kubernetes
+    - helm
+- hosts: kube_node
+  gather_facts: true
+  become: yes
+  vars:
+    kubernetes_role: "node"
+  roles:
+    - docker
+    - kubernetes

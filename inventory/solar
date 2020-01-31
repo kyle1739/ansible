@@ -1,0 +1,10 @@
+[solar]
+192.168.20.175 ansible_port=22 ansible_user=root
+
+[solar_gcp]
+#35.201.192.27 ansible_port=8822 ansible_user=solar
+35.221.142.245 ansible_port=22 ansible_user=solar ansible_ssh_pass=alxfSs7mp5xCpha ansible_sudo_pass=alxfSs7mp5xCpha 
+35.201.186.112 ansible_port=22 ansible_user=solar ansible_ssh_pass=aEwU93pKedepp ansible_sudo_pass=aEwU93pKedepp
+
+# [new_server]
+# new_server ansible_port=22 ansible_user=root

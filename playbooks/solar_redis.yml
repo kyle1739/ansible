@@ -1,0 +1,5 @@
+- hosts: solar_redis
+  gather_facts: true
+  become: yes
+  roles:
+    - redis
